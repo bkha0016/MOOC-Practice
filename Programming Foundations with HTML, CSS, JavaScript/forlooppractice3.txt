@@ -1,0 +1,42 @@
+
+function changeRed(width,height){
+    var picture = new SimpleImage(width,height);
+    var red = 0;
+    var blue = 0;
+    var green = 0;
+    
+    
+    for (var pixel of picture.values()){
+        pixel.setRed(red);
+        pixel.setGreen(200);
+        pixel.setBlue(100);
+        
+        if(pixel.getRed() < 255){
+            red += 1;
+        }
+        if(pixel.getRed() == 255){
+            red = 0;
+        }
+        
+        /*
+        if(pixel.getBlue() < 200){
+            blue += 1;
+        }
+        
+        if(pixel.getBlue() == 200){
+            blue = 0;
+        }
+        
+        if(pixel.getGreen() < 100){
+            green += 1;
+        }
+        
+        if(pixel.getGreen() == 100){
+            green = 0;
+        }
+        */
+    }
+return picture} 
+
+
+print(changeRed(256,200));

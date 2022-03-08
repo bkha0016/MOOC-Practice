@@ -1,0 +1,69 @@
+#Programming Exercise: Modifying Images
+
+Part 1:
+
+var img = new SimpleImage("hilton.jpg");
+var width = img.getWidth()
+
+for (var pixel of img.values()){
+    if (pixel.getX() < width/3){
+        pixel.setRed(255);
+    }
+    if (pixel.getX()> 2*width/3){
+        pixel.setBlue(255);
+    }
+    if (pixel.getX() < 2*width/3){
+        if(pixel.getX() > width/3){
+            pixel.setGreen(255);
+        }
+        
+    }
+
+
+}
+
+print(img);
+
+
+part2:
+// write your code here
+
+function swapRedGreen(pic){
+    var img = new SimpleImage(pic);
+    
+    for (var pixel of img.values()){
+        
+        pixel.setRed(pixel.getGreen());
+        pixel.setGreen(pixel.getRed());
+        
+    }
+return img}
+
+
+
+result1 = swapRedGreen("chapel.png");
+
+print(result1);
+
+result2 = swapRedGreen("lion.jpg");
+
+print(result2);
+
+
+part 3:
+
+var img = new SimpleImage("duke_blue_devil.png");
+
+for (var pixel of img.values()){
+    if (pixel.getGreen() <= 51){
+        if(pixel.getRed() <= 0){
+            if(pixel.getBlue() <= 227){
+                pixel.setRed(255);
+                pixel.setGreen(255);
+                pixel.setBlue(0);
+            }
+        }
+    }
+}
+
+print(img);

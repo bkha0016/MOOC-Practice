@@ -1,0 +1,106 @@
+body {
+    /*Background color for entire page*/
+    background-color: gainsboro;
+  }
+
+.topdiv{
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color:azure;
+    border-width: 5px;
+    padding-left: 5px;
+    font-family: "Garamond";
+    text-align: center;
+
+}
+
+.subtitle{
+font-family: "Courier New"}
+
+
+.boxdiv{
+background-color: navajowhite;
+border: solid;
+border-width: 5px;
+font-family:"Kalam";
+text-align: center;
+font-size: 30px;
+margin: 0px 2px 15px 2px;
+padding: 0px 17px 5px 17px;
+
+}
+
+.boxdiv2{
+    background-color: rgb(235, 214, 217);
+    border: solid;
+    border-width: 5px;
+    font-family:"Kalam";
+    text-align: center;
+    font-size: 15px;
+    margin: 0px 2px 15px 2px;
+    padding: 0px 17px 5px 17px;
+    
+    }
+.boxdiv2 h2{text-align: center;
+font-style: italic;
+color:maroon;
+font-size: 20px;
+}
+
+.boxdiv2 h1{text-align: center; font-family:monospace; 
+    font-size: 30px;
+color:maroon;}
+
+.boxdiv2 ol{text-align: center; font-size: 15px; font-family:'Courier New', Courier, monospace;}
+.boxdiv2 ul{text-align: center; font-size: 15px; font-family:'Courier New', Courier, monospace;}
+
+
+.tablediv{
+background-color: ghostwhite;
+width: 100%;
+margin: 0px 0px 0px -9px;
+padding: 12px 19px 0px 0px;
+color:black;
+font-size: 30px;
+text-align: center;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+.tablediv h3{text-align: center;
+color: black;}
+
+.tablediv li{
+    font-size: 30 px;
+    color:blue;
+    text-align: center;
+    
+
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+  }
+img {
+    width: 400px;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    border-color: GhostWhite;}
+
+
+li{font-size: 50 px;
+text-align: center;}
+
+h3 {text-align: center;
+color:darkgoldenrod;}
+
+.f1{font-style: "papyrus";
+font-size: 30px;
+text-align: center;}
+

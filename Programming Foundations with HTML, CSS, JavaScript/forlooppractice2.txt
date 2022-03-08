@@ -1,0 +1,28 @@
+// write your code here
+
+var img = new SimpleImage("chapel.png");
+
+
+function topRightCorner(cornerHeight, cornerWidth,pic,red,green,blue){
+    var picture = new SimpleImage(pic);
+    for (var pixel of picture.values()){
+        if (pixel.getY() <= cornerHeight){
+            if(pixel.getX() >= picture.getWidth() - cornerWidth){
+                pixel.setRed(red);
+                pixel.setGreen(green);
+                pixel.setBlue(blue);
+            }
+        }
+        
+    }
+return picture}
+
+
+result1 = topRightCorner(60,30,"chapel.png",255,255,0);
+
+print(result1);
+
+
+result2 = topRightCorner(20,125,"smalllion.jpg",255,0,0);
+
+print(result2);
