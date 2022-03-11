@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<!--this file cannot be used because theres no libaray for SimpleImage-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="upload prototype.css">
+    <title>upload prototype</title>
+
+</head>
+
+<body>
+    <h1>Upload Image Prototype</h1>
+
+    <canvas id ="can" class = "canvas"> 
+
+    </canvas>
+<!--input space-->
+<p>
+    <!--input type="text" id="finput"-->
+    <!--input type="button" value = "Upload" onclick="upload()"-->
+    <input type="file" multiple = "false" accept="image/*" id ="finput" onchange="upload()">
+    <input type="button" id ="ginput" value="Make Gray" onclick="makeGray()">
+    <input type="button" id ="rinput" value="reset" onclick="makeReset()">
+    <input type="button" id ="cinput" value="Make Green" onclick="makeConfuse()">
+    <input type="button" id ="cinput" value="Whatever" onclick="makeWhatever()">
+</p>
+
+<!--JS script-->
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+<script>
+    var image;
+    
+
+    function upload(){
+        var imgcanvas = document.getElementById("can");
+        var fileinput = document.getElementById('finput');
+        var filename = fileinput.value;
+        image = new SimpleImage(fileinput);
+        alert("Choose "+filename);
+        image.drawTo(imgcanvas);
+    
+    }
+
+    function makeGray(){
+        for(var pixel of image.values()){
+            var avg = (pixel.getRed() + pixel.getBlue() + pixel.getGreen())/3;
+            pixel.setRed(avg);
+            pixel.setGreen(avg);
+            pixel.setBlue(avg);
+         }
+    
+         var imgcanvas = document.getElementById("can");
+         image.drawTo(imgcanvas);
+
+    }
+
+    function makeReset(){
+        var fileinput = document.getElementById('finput');
+        image = new SimpleImage(fileinput);
+
+        var imgcanvas = document.getElementById("can"); 
+        image.drawTo(imgcanvas);
+    }
+
+    function makeConfuse(){
+
+        for(var pixel of image.values()){
+            pixel.setGreen(255);
+        }
+    var imgcanvas = document.getElementById("can");       
+    image.drawTo(imgcanvas);
+    }
+
+    function makeWhatever(){
+        for(var pixel of image.values()){
+            pixel.setGreen(pixel.getRed());
+            pixel.setBlue(pixel.getGreen());
+            pixel.setRed(pixel.getBlue());
+}
+    var imgcanvas = document.getElementById("can");       
+    image.drawTo(imgcanvas);
+}
+
+
+    
+</script>
+
+
+</body>    
+
+</html>
+

@@ -1,0 +1,25 @@
+.canvas{
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid #c3c3c3;
+}
+.redback{
+    background-color: red;
+}
+
+.orangeback{
+    background-color: orange;
+}
+
+.fuschiaback{
+    background-color: fuchsia;
+}
+
+.blueback{
+    background-color: lightblue;
+}
+
+.input{
+    font-size: 20pt;
+}

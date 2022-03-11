@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>button practice</title>
+    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="practice.js">
+    
+</head>
+
+
+<body>
+
+    <h1>Buttons with div practice</h1>
+
+    <div id = "d1" class = "maroonback">
+        Hello
+    </div>
+
+    <div id = "d2" class = "melllowback">
+        Goodbye
+    </div>
+
+    <div id = "ax">
+        randomizing stuff that i dont really look at or care about
+    </div>
+
+    <div id = "d3">
+        <input type = "button" value = "Alert" onclick = "dochange()">
+        <input type ="button" value ="Choice" onclick = "doconfirm()">
+        <input type = "button" value = "color change" onclick = "docolor()">
+        <input type = "button" value = "text change" onclick = "dotext()">
+        <input type = "button" value = "reset" onclick = "doreset()">
+        <input type = "button" value = "buff me up" onclick = "dobuff()">
+        <input type = "button" value = "myvalue" onclick = "dovalue()">
+
+
+    </div>
+
+    <script>
+    function dochange(){
+        alert('clicked button with JS function yo');
+    
+    }
+
+    function dovalue(){
+        document.value = "newButtonValue";
+    }
+    
+    function dobuff(){
+        var dd1 = document.getElementById("d1");
+        var dd2 = document.getElementById("d2");
+
+        dd1.className = "bigtext";
+        dd2.className =  "bigtext";
+    }
+        
+    function doreset(){
+        var dd1 = document.getElementById("d1");
+        var dd2 = document.getElementById("d2");
+
+        dd1.innerHTML = "Hello";
+        dd2.innerHTML = "Goodbye";
+
+        dd1.className = "d1"
+        dd2.className = "d2"
+    }
+
+    function docolor(){
+        var dd1 = document.getElementById("d1");
+        var dd2 = document.getElementById("d2");
+
+        dd1.className = "blueback";
+        dd2.className = "yellowblack";
+    }
+
+    function dotext(){
+        var dd1 = document.getElementById("d1");
+        var dd2 = document.getElementById("d2");
+
+        dd1.innerHTML = "你好";
+        dd2.innerHTML = "再见";
+
+    }
+
+    function doconfirm(){
+        let text;
+        if (confirm("Press a button") == true){
+            text = "you pressed OK!";
+            alert('You pressed OK!!!!');
+        }
+        else{
+            text = "Are you Sure you Want to cancel";
+            alert(text);
+            if(confirm("yes") == true){
+                alert('then fine');
+            }
+            else{
+                alert("im tired of this crap");
+            }
+        }
+
+
+    }
+    </script>
+
+</body>
+
+</html>

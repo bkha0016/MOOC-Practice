@@ -1,0 +1,52 @@
+
+.div{
+    width: 200px;
+    font-size: 28px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid lightgray;
+}
+#d1{
+    
+    
+}
+
+#d2{
+    
+
+}
+
+#myBtn{
+
+
+}
+
+#d3{
+    border: dotted;
+    border-width: 5px;
+    background-color: aliceblue;
+    font-size: 50px;
+    margin: 0px 2px 15px 2px;
+    padding: 0px 17px 5px 17px;
+    align-items: center;
+}
+
+.yellowblack{
+    background-color: yellow;
+}
+
+.blueback{
+    background-color: lightblue;
+}
+
+.maroonback{
+    background-color: lightcoral;
+}
+
+.melllowback{
+    background-color: rgb(121, 114, 161);
+}
+
+.bigtext{
+    font-size: larger;
+}

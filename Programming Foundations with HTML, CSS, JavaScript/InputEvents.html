@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8"/>
+<title>input&Event Practice</title>
+<link rel="stylesheet" href="InputEvents.css"/>
+
+
+</head>
+
+<body>
+
+<canvas id ="d1">
+
+
+</canvas>
+
+<p>
+    <input type = "color" value ="#001A57" onchange="docolor()" id ="clr"/>
+    <!--input type = "color" value ="onclick" onchange="docolor_1()" id ="clr"/-->
+
+    <input type = "range" min ="10" max = "100" value ="10" id ="sldr" oninput="dosquare()">
+
+</p>
+
+<h1>Try it! Inputs & Events </h1>
+
+<canvas id = "d2">
+
+</canvas>
+<p>
+    <input type = "color" value = "#0000FF" onclick = "yes_color()" id ="abs1"/>
+    <input type = "color" value = "0000FF" onchange="yes_color1()" id = "abs2"/>
+    <input type = "range" min ="10" max = "100" value ="10" id ="sldr_1" oninput="dosquare_1()"/>
+
+</p>
+
+
+<script>
+
+function docolor(){
+var dd1 = document.getElementById("d1");
+var colorinput = document.getElementById("clr");
+var color = colorinput.value;
+dd1.style.backgroundColor = color;
+
+}
+
+function docolor_1(){
+var dd1 = document.getElementById("d1");
+var colorinput = document.getElementById("clr");
+var color = colorinput.value;
+dd1.style.backgroundColor = color;
+
+}
+
+function dosquare(){
+    var dd1 = document.getElementById("d1");
+    var sizeinput = document.getElementById("sldr");
+
+    var size = sizeinput.value;
+    var ctx = dd1.getContext('2d');
+    ctx.clearRect(0,0,dd1.width,dd1.height);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect(10,10,size,size);
+
+}
+function dosquare_1(){
+    var dd1 = document.getElementById("d2");
+    var sizeinput = document.getElementById("sldr_1");
+
+    var size = sizeinput.value;
+    var ctx = dd1.getContext('2d');
+    ctx.clearRect(0,0,dd1.width,dd1.height);
+    ctx.fillStyle = "maroon";
+    ctx.fillRect(30,30,size,size);
+
+}
+function yes_color(){
+
+    var dd1= document.getElementById("d2");
+    var colorinput = document.getElementById("abs1");
+
+    var color = colorinput.value;
+    dd1.style.backgroundColor = color;
+
+}
+
+function yes_color1(){
+    var dd1 = document.getElementById("d2");
+    var colorinput = document.getElementById("abs2");
+    var color = colorinput.value;
+
+    dd1.style.backgroundColor = color;
+
+}
+
+</script>
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel ="stylesheet" href="upload prototype.css">
+    <title>GreenScreen</title>
+
+</head>
+<body>
+<h1>Green Screen!!!</h1>
+
+<canvas id="can1" class = "canvas">
+</canvas>
+
+<canvas id="can2" class="canvas">
+</canvas>
+
+<canvas id="can3" class="canvas">
+</canvas>
+
+<p>
+<!--Input palace-->
+<input type="file" multiple = "false" accept="image/*" id ="foreground" onchange="loadForegroundImage()">
+<input type="file" multiple = "false" accept="image/*" id ="background" onchange="loadBackgroundImage()">
+
+<input type="button" id ="composite" value="Create Composite" onclick="doGreenScreen()">
+<input type="button" id = "clear" value = "Clear Canvases" onclick="clearCanvas()">
+</p>
+
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+
+<!--Script write-->
+<script>
+
+var bg_image = null;
+var fg_image = null;
+var fgcanvas;
+var bgcanvas;
+var out_canvas;
+
+
+function loadBackgroundImage(){
+    var bgcanvas = document.getElementById("can2");
+    var fileinput = document.getElementById('background');
+    var filename = fileinput.value;
+    
+    bg_image = new SimpleImage(fileinput);
+    
+    return bg_image.drawTo(bgcanvas);
+    
+}
+function loadForegroundImage(){
+    var fgcanvas = document.getElementById("can1");
+    var fileinput = document.getElementById('foreground');
+    var filename = fileinput.value;
+    
+    fg_image = new SimpleImage(fileinput);
+    
+    return fg_image.drawTo(fgcanvas);
+
+
+}
+
+//writing the code for the greenscreen algorithm
+
+function doGreenScreen(){
+    
+    var fileinput = document.getElementById('foreground');
+    var filename = fileinput.value;
+    
+    fg_image = new SimpleImage(fileinput);
+
+    var fileinput = document.getElementById('background');
+    var filename = fileinput.value;
+    
+    bg_image = new SimpleImage(fileinput);
+
+
+
+    //for output var
+    var out_canvas = document.getElementById("can3");
+    out_image = new SimpleImage(fg_Image.getWidth(), fg_Image.getHeight());
+    
+
+    var greenThreshold = 240;
+
+    for (var pixel of fg_image.values()){
+        
+        var x = pixel.getX();
+        var y = pixel.getY();
+        
+        if (pixel.getGreen() > greenThreshold){
+            
+            var bgPixel = bg_image.getPixel(x,y);
+            out_image.setPixel(x,y,bgPixel);
+
+        }
+
+        else{
+
+            out_image.setPixel(x,y,pixel);
+
+        }
+
+
+    }
+    return out_image.drawTo(out_canvas);
+    
+    
+    
+}
+         
+        
+
+function clearCanvas(){
+
+    context_1.clearRect(0, 0, canvas_1.width, canvas_1.height);
+    context_2.clearRect(0,0,canvas_2.width, canvas_2.height);
+
+
+}
+
+</script>
+
+</body>
+</html>

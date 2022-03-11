@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TO DO LIST</title>
+<link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+
+    <h1 id="myHeader">TO DO List</h1>
+
+<!-- STEPs 1 and 2 below here  -->
+<input type = "button" id = "addButton" value = "Add" onclick ="addTask()">
+<input type = "text" id = "input" placeholder="enter task ...">
+
+ <hr>
+
+<ul id="tasks">
+
+  <li>
+
+    <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
+
+    <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
+
+    <input type="button" class="important" onclick="important(this.parentNode)" value ="!" />
+
+    make todo list
+
+  </li>
+
+ </ul>
+
+<hr>
+
+<!-- STEPs 8 and 9 below here  -->
+<div id = "divabout" class = "aboutcolor">
+
+    <input type = "button" class = "about" value = "About" onclick = "doAbout()">
+
+
+
+</div>
+
+<!-- STEP 13 below here  -->
+<div>
+
+    <input type = "button" class = "clearAbout" value = "Clear" onclick = "clearAbout()">
+
+</div>
+
+
+
+
+<script>
+    function addTask () {
+    var input = document.getElementById("input");
+    // get current text from input field
+    var newTask = input.value;
+    // only add new item to list if some text was entered 
+    if (newTask != "") {
+        // create new HTML list item
+        var item = document.createElement("li");
+        // add HTML for buttons and new task text
+        // Note, need to use '' because of "" in HTML
+        item.innerHTML = '<input type="button" class="done" onclick="markDone(this.parentNode)"  value="&#x2713;" /> ' + '<input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" /> ' + '<input type="button" class="important" onclick="important(this.parentNode)" value ="!"/>' + newTask;
+
+        // add new item as part of existing list
+        document.getElementById("tasks").appendChild(item); 
+
+        /* Step 4 below here */ 
+        input.value = "";
+        input.placeholder ="enter next task..."
+    }
+}
+
+// change styling used for given item
+function markDone (item) {
+    item.className = 'finished';
+}
+
+/* Step 7 below here */
+function remove (item) {
+    // remove item completely from document
+    if(item.className == 'finished'){
+    item.remove();}
+}
+
+/* Step 11 below here */
+function doAbout() {
+var dd1 = document.getElementById("divabout");
+
+dd1.innerHTML = "Author is Bryan";
+
+}
+
+/* Step 14 below here */
+function clearAbout() {
+    var dd1 = document.getElementById("divabout");
+
+    dd1.innerHTML ="";
+
+}
+
+function important(item){
+
+    item.className = 'important';
+    item.important();
+
+
+}
+</script>
+
+
+
+</body>
+
+
+
+
+</html>
+
+
+
+

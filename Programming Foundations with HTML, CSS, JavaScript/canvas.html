@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+
+    <meta charset = "UTF-8">
+    <title>canvas</title>
+    <link rel="stylesheet" href="canvas.css">
+
+</head>
+
+<body>
+
+    <h1>Toward a Canvas</h1>
+    <canvas id = "d1" class = "canvas">
+
+    </canvas>
+    <p>
+        <input type="button" value = "make lime" onclick="dolime()"/>
+        <input type="button" value = "make yellow " onclick="doyellow()"/>
+
+
+    </p>
+
+    <h1>Canvas Practice</h1>
+    <canvas id="div1" class = "orangeback">
+
+    </canvas>
+
+    <canvas id = "div2" class = "fuschiaback">
+
+    </canvas>
+
+    <p>
+
+        <input type="button" value = "change colors" onclick="docolor()"/>
+        <input type="button" value = "make red" onclick="doRed()"/>
+        <input type="button" value = "make blue" onclick="doBlue()"/>
+
+    
+    </p>
+
+
+
+
+<!--Script place-->
+
+<script>
+    function dolime(){
+        var dd1 = document.getElementById("d1");
+        dd1.style.backgroundColor ="lime";
+    }
+    function doyellow(){
+        var dd2 = document.getElementById("d1");
+        dd2.style.backgroundColor = "white";
+
+        var ctx = dd2.getContext("2d");
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(10,10,40,40);
+        ctx.fillRect(60,10,40,40);
+
+        ctx.fillStyle = "black";
+        ctx.font ="30px Arial"; 
+        ctx.fillText("Hello", 20, 20);
+
+    }
+    function docolor(){
+        var dd3 = document.getElementById("div1");
+        var dd4 = document.getElementById("div2");
+
+        dd3.className = "blueback";
+        dd4.className = "orangeback";
+
+    }
+
+    function doRed(){
+        var a1 = document.getElementById("div1");
+        var a2 = document.getElementById("div2");
+
+        a1.style.backgroundColor = "red";
+        a2.style.backgroundColor = "red";
+
+        var ctx = a1.getContext("2d");
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(10,10,40,40);
+        ctx.fillRect(60,10,40,40);
+
+        ctx.fillStyle = "black";
+        ctx.font ="30px Arial"; 
+        ctx.fillText("Hello", 20, 20);
+
+        var car = a2.getContext("2d");
+        car.fillStyle = "brown";
+        car.fillRect(30,30,40,40);
+        car.fillRect(60,30,40,40);
+
+        car.fillStyle= "white";
+        car.font = "30px Arial";
+        car.fillText("Welcome",30,30);
+
+        
+        
+
+
+    }
+
+    function doBlue(){
+        var a1 = document.getElementById("div1");
+        var a2 = document.getElementById("div2");
+
+        a1.style.backgroundColor = "blue";
+        a2.style.backgroundColor = "blue";
+
+        var context = a1.getContext("2d");
+        context.clearRect(0,0,canvas,30,30);
+
+        a1.style.backgroundColor = "blue";
+
+
+    }
+</script>
+
+
+
+
+
+</body>
+
+
+</HTML>

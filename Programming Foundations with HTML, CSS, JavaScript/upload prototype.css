@@ -1,0 +1,11 @@
+.canvas{
+    width: 300px;
+    height: 300px;
+    border: 1px solid lightgray;
+
+}
+
+h1{
+    font-family: arial;
+    color: dimgray;
+}
