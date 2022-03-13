@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel = "stylesheet" href="miniproject1.css">
+
+<title>mini project1</title>
+
+</head>
+
+<body>
+<h1>Image Filter</h1>
+
+<!--Canvas-->
+<div style = "text-align: center;">
+<canvas id="can1">
+</canvas>
+</div>
+
+<div style = "text-align: center;">
+<!--Input-->
+<input type="file" id="finput" multiple="false" accept="image/*" onchange="upload()">
+<input type ="button" id ="gray" value="Make Gray" onclick="makeGray()">
+<input type="button" id="red" value="Make Red" onclick="makeRed()">
+<input type="button" id="red" value="Green Vision" onclick="makeGreen()">
+<input type="button" id="blur" value="Make Blur" onclick="makeBlur()">
+<input type="button" id="reset" value="Reset" onclick="makeReset()">
+</div>
+
+
+<!--Script portion-->
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+<!--JavaScript-->
+
+<script>
+    var img = null;
+    var imgCanvas = null;
+
+    function upload(){
+        var file = document.getElementById("finput");
+        img = new SimpleImage(file);
+        imgCanvas = document.getElementById("can1");
+        
+        return img.drawTo(imgCanvas);
+    }
+
+    function imageIsNotLoaded(){
+            alert("Image is not uploaded")
+        }
+
+
+    function makeGray(){
+
+        if (img == null){
+            imageIsNotLoaded();
+        }
+
+        else{
+        for(var pixel of img.values()){
+            var avg = (pixel.getRed() + pixel.getBlue() + pixel.getGreen())/3;
+            pixel.setRed(avg);
+            pixel.setGreen(avg);
+            pixel.setBlue(avg);
+         }
+    
+         imgCanvas = document.getElementById("can1");
+         img.drawTo(imgCanvas);
+        }
+    }
+
+    function makeRed(){
+        if (img == null){
+            imageIsNotLoaded();
+        }
+        else{
+
+            for(var pixel of img.values()){
+                var avg = (pixel.getRed() + pixel.getBlue() + pixel.getGreen())/3;
+
+                if(avg < 128){
+
+                    pixel.setRed(255);
+                    pixel.setGreen(0);
+                    pixel.setBlue(0);
+                    
+ 
+
+                }
+                else{
+                    pixel.setRed(255);
+                    pixel.setGreen((2*avg)-255);
+                    pixel.setBlue((2*avg)-255);
+                }
+    
+                
+            }
+            imgCanvas = document.getElementById("can1");
+            img.drawTo(imgCanvas);
+}
+}
+function makeBlur(){
+        if (img == null){
+            imageIsNotLoaded();
+        }
+        else{
+            var file = document.getElementById("finput");
+            img = new SimpleImage(file);
+            imgCanvas = document.getElementById("can1");
+            img.drawTo(imgCanvas);
+            document.getElementById("can1").style.filter="blur(3Px)";
+            
+
+            }
+            
+        }
+
+
+function makeReset(){
+        if (img == null){
+            imageIsNotLoaded();
+        }
+        else{
+            var file = document.getElementById("finput");
+            img = new SimpleImage(file);
+            imgCanvas = document.getElementById("can1");
+            img.drawTo(imgCanvas);
+            document.getElementById("can1").style.filter="blur(0Px)";
+        }
+
+    }
+
+function makeGreen(){
+        if (img == null){
+            imageIsNotLoaded();
+        }
+        else{
+
+            for(var pixel of img.values()){
+
+                if (pixel.getGreen() > 200){
+                    pixel.setGreen(255);
+                }
+                else{   
+                    pixel.setRed(0);
+                    pixel.setGreen(0);
+                    pixel.setBlue(0);
+                                    
+                }
+    
+                
+            }
+            imgCanvas = document.getElementById("can1");
+            img.drawTo(imgCanvas);
+        }
+}
+
+
+
+</script>
+
+</body>
+
+</html>
