@@ -1,0 +1,130 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname functions_booleans) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+#|
+;Booleans and If expressions
+
+(require 2htdp/image)
+;true
+;false
+
+
+;(define WIDTH 100)
+;(define HEIGHT 100)
+;(> WIDTH HEIGHT)
+;(>= WIDTH HEIGHT)
+;
+;(= 1 2)
+;(= 1 1)
+;(> 3 9)
+
+(define I1 (rectangle 10 20 "solid" "red"))
+(define I2 (rectangle 20 10 "solid" "red"))
+
+(if (< (image-width I2)
+       (image-height I2))
+    "Tall"
+    "Wide")
+
+;TO form an if expression
+;(if <expression> <expression> <expression>)
+
+(and (> (image-height I1) (image-height I2))(< (image-width I1) (image-width I2)))
+
+|#
+#|
+(define (proft ticket-price)
+  (- (revenue ticket-price) (cost ticket-price)))
+
+(define (revenue ticket-price)
+  (* (attendees ticket-price) ticket-price))
+
+(define (cost ticket-price)
+  (+ 180 (* 0.04 (attendees ticket-price))))
+
+(define (attendees ticket-price)
+  (+ 120
+     (* (/ 15 .10) (- 5.00 ticket-price))))
+
+
+(attendees 3)
+(attendees 4)
+(attendees 5)
+|#
+#|
+;inches -> cm
+(define (inches->cm inch)
+  (* 2.54 inch))
+;feet -> inches
+
+(define (feet->inches feet)
+  (* 12  feet))
+
+;yards->feet
+(define (yards->feet yards)
+  (* 3 yards))
+
+;rods->yards
+(define (rods->yards rods)
+  (* 5.5 rods))
+
+;furlong->rods
+(define (furlong->rods furlong)
+  (* 40 furlong))
+
+;miles -> furlongs
+(define (miles->furlongs miles)
+  (* 8 miles))
+
+
+;feet -> cm
+(define (feet->cm feet)
+  (inches->cm(feet->inches feet)))
+
+(feet->cm 10)
+
+;rods->inches
+(define (rods->inches rods)
+  (feet->inches(yards->feet(rods->yards rods))))
+
+(rods->inches 10)
+
+;miles->feet
+(define (miles->feet miles)
+  (yards->feet(rods->yards(furlong->rods(miles->furlongs miles)))))
+
+(miles->feet 10)
+
+|#
+
+;Volume cylinder
+(define PI 3.14159)
+
+(define (volume-cylinder r h)
+  (* PI (sqr r) h))
+
+(volume-cylinder 2 10)
+
+;Area-cylinder
+
+(define (area-cylinder r h)
+  (+ (* 2 PI (sqr r))(* 2 PI r h)))
+
+(area-cylinder 2 10)
+
+
+;Celsisu -> Fahrenheit
+
+(define (Fahrenheit->Celsius fah)
+  (* (- fah 32) (/ 5 9)))
+
+(define (Celsius->Fahrenheit cel)
+  (+ 32 (* cel (/ 9 5))))
+
+(define (I f)
+  (Celsius->Fahrenheit (Fahrenheit->Celsius f)))
+
+(I 32)
+
+
+

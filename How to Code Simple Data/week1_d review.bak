@@ -1,0 +1,114 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |week1_d review|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+#|
+Varieties of Data:
+numbers, booleans, symbols, structures
+
+number? boolean? symbol? struct?
+
+(define (sum a b)
+  (+ a b))
+
+(check-expect(sum 2 3) 2)
+|#
+
+
+(define (is-between-5-6? num)
+  (cond[(number? num) (and (> num 5)(< num 6))]
+       [(boolean? num) (error 'is-between-5-6? "number expected")]
+       [(symbol? num) (error 'is-between-5-6? "number expected")]
+       [(struct? num) (error 'is-between-5-6? "number expected")]
+       ))
+
+
+;test cases
+;(is-between-5-6? 5.5)
+
+
+
+;;exercise 7.2.1 structure & data defiition of zoo animals collection
+
+;data definition: legs num, space num, intellect symbol
+#|
+(define-struct spiders(legs space))
+
+(define-struct elephants(space))
+
+(define-struct monkeys(intellect space))
+
+(define (fits? a-animal volume)
+  (cond[(> volume (spiders-space a-animal)) true]
+       [else false]))
+
+
+(fits?(make-spiders 10 10) 20)
+
+
+Develop structure & data definitiosn for a collection of vehivles
+collection; buses, limos, cars, & subways (2 attributes per class)
+wheel,space,length,speed, torque: num
+color: symbols
+brand: symbols
+
+(define-struct buses(wheel space lenght color))
+(define-struct limos(wheel space lenght color))
+(define-struct cars(wheel space brand torque color))
+(define-struct subways(color speed))
+
+
+|#
+(require htdp/draw)
+
+#|
+(define-struct circle (color center radius))
+(define-struct rectangle(color nw-corner width height))
+
+(define (draw-shape a-shape)
+  (cond
+    [(circle? a-shape) 
+     (draw-circle
+      (circle-center a-shape)
+      (circle-radius a-shape)
+      (circle-color a-shape))]
+    [(rectangle? a-shape)
+     (draw-solid-rect 
+      (rectangle-nw-corner a-shape)
+      (rectangle-width a-shape)
+      (rectangle-height a-shape)
+      (rectangle-color a-shape))]))
+
+(start 200 200)
+(draw-shape (make-circle 'red (make-posn 30 30) 20))
+(draw-shape (make-rectangle 'blue (make-posn 30 60) 20 50))
+|#
+
+;; Input Errors
+
+(define (area-of-disk r)
+  (cond [(number? r)(* 3.14 r r)]
+        [(boolean? r) (error 'checked-area-of-disk "number expected")]
+        [(symbol? r) (error 'checked-area-of-disk "number expected")]))
+
+
+
+(define-struct vec(x y))
+
+
+
+(define (checked-make-vec a-vec)
+  (cond [(and
+          (number? (vec-x a-vec))(number? (vec-y a-vec))(> (vec-x a-vec) 0)(> (vec-y a-vec) 0)) true]
+        [else (error 'checked-make-vac "+ number expected")]))
+
+
+(checked-make-vec (make-vec 3 2))
+(checked-make-vec (make-vec true false))
+
+
+
+
+
+
+
+       
