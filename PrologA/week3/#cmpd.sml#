@@ -1,0 +1,49 @@
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- val x = {bar = (1+2, true andalso true) ,foo = 3 + 4, baz = (false,9)};
+val x = {bar=(3,true),baz=(false,9),foo=7}
+  : {bar:int * bool, baz:bool * int, foo:int}
+- x;
+val it = {bar=(3,true),baz=(false,9),foo=7}
+  : {bar:int * bool, baz:bool * int, foo:int}
+- val my_niece = {name = "Amelia", id = 41123-12};
+val my_niece = {id=41111,name="Amelia"} : {id:int, name:string}
+- #id my_niece;
+val it = 41111 : int
+- val brain_part = {id=true, ego = false, superego = false};
+val brain_part = {ego=false,id=true,superego=false}
+  : {ego:bool, id:bool, superego:bool}
+- #superego brain_part;
+val it = false : bool
+- #ego brain_part;
+val it = false : bool
+- #d brain_part;
+stdIn:8.1-8.14 Error: operator and operand don't agree [record labels]
+  operator domain: {d:'Y; 'Z}
+  operand:         {ego:bool, id:bool, superego:bool}
+  in expression:
+    (fn {d=d,...} => d) brain_part
+- #d brain_part;
+stdIn:1.2-1.15 Error: operator and operand don't agree [record labels]
+  operator domain: {d:'Y; 'Z}
+  operand:         {ego:bool, id:bool, superego:bool}
+  in expression:
+    (fn {d=d,...} => d) brain_part
+- 
+- val a_pair = (3,6);
+val a_pair = (3,6) : int * int
+- val a_record = {second = 4 + 2, first = 3+1};
+val a_record = {first=4,second=6} : {first:int, second:int}
+- val another_pair = {2=5, 1=6};
+val another_pair = (6,5) : int * int
+- #1 a_pair + #2 another_pair
+= ;
+val it = 8 : int
+- val x = {1 = true ,3 = "hi"} : {1:bool, 3:string};
+val x = {1=true,3="hi"} : {1:bool, 3:sring}
+-x;
+val it = {1=true,3="hi"} : {1:bool, 3:string}
+- val y = {3 = "hi", 1 = true , 2 = 3+2};
+val y = (true,5,"hi") : bool * int * string
+- 
+
+Process sml finished

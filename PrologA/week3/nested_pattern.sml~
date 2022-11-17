@@ -1,0 +1,23 @@
+(*dont do this*)
+
+exception ListLengthMismatch
+
+fun old_zip3 (l1,l2,l3) =
+    if null l1 andalso null l2 andalso null l3
+    then []
+    else if null l1 orelse null l2 orelse null l3
+    then raise ListLengthMismatch
+    else (hd l1, hd l2, hd l3) :: old_zip3(tl l1, tl l2, tl l3)
+
+fun shallow_zip3 (l1,l2,l3) =
+    case l1 of
+	[] =>
+	(case l2 of
+	     [] => (case l3 of
+			[] => []
+		      | _ => raise ListLengthMismatch)
+	   | _ => raise ListLengthMismatch)
+
+	    
+					  
+					  

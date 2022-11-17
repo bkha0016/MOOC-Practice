@@ -1,0 +1,16 @@
+(*
+Tuples build each of types: int * bool contains an int & a bool
+Options build one of types: int option contains an int or it contains no data
+Lists use all three building blocks: int list contain int and another int list or no data
+
+nest compound types:
+(int * int) option * (int list list)) option
+
+*)
+val x = {bar = (1+2, true andalso true) ,foo = 3 + 4, baz = (false,9)};
+
+val my_niece = {name = "Amelia", id = 41123-12};			      
+
+val brain_part = {id=true, ego = false, superego = false};
+				      
+				      
