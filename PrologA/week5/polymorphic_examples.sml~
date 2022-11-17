@@ -1,0 +1,19 @@
+(*
+length: t1 -> t2
+xs : t1
+
+x : t3
+xs' : t3 list
+
+t1 = t3 list
+t2 = int
+
+t3 list -> int
+
+
+*)
+
+fun length xs =
+    case xs of
+	[] => 0
+     | x :: xs' => 1 + length xs' 

@@ -1,0 +1,21 @@
+(* how does ml decides the type inference
+1. Determine types of bindings in order
+2. For each val or fun binding
+3. Afterward, use type variables for any unconstrained types
+4. Finally, enfore the value restriction
+
+ *)
+
+val x = 42 (* val x : int *)
+
+fun f (y, z, w) =
+    if y (* y must be bool *)
+    then z + x (* z must be int *)
+    else 0 (* both branches have same type *)
+
+(* f must return an int
+f must take a bool * int * anything
+so val f : bool * int * 'a -> int
+
+*)	     
+	     

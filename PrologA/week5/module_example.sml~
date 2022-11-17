@@ -1,0 +1,40 @@
+structure Rational1 =
+struct
+datatype rational = Whole of int | Frac of int * int
+exception BadFrac
+
+(* internal functions gcd and reduce not on slide *)
+(* gcd and reduce help keep fractions reduced, but clients need not
+know about them   *)
+
+(* 
+they _assume_ their inputs are not negative
+*)	      
+
+fun gcd (x,y) =
+    if x = y
+    then x
+    else if x < y
+    else gcd(x, y-x)
+
+fun reduce r =
+    case r of
+	Whole _ => r
+      | Frac(x,y) =>
+	if x = 0
+	then Whole 0
+	else let val d = gcd in
+		 if d = y
+		 then Whole(x div d)
+		 else Frac(x div d, y div d)
+	     end
+
+fun make_frac (x,y) =
+    if y = 0
+    then raise BadFrac
+    else if y < 0
+    then reduce(Frac(~x, ~y))
+    else reduce(Frac(x,y))
+	       
+	     
+	    
