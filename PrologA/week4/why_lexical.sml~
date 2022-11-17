@@ -1,0 +1,23 @@
+(*f1 and f2 are always the same, no matter wher result is used*)
+
+fun f1 y =
+    let
+	val x = y + 1
+    in
+	fn z => x + y + z
+    end
+
+fun f2 y =
+    let
+	val q = y + 1
+    in
+	fn z => q + y + z
+    end
+	
+val x = 17 (*irrelevant*)
+val a1 = (f1 7) 4
+val a2 = (f2 7) 4
+
+
+
+		
