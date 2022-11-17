@@ -1,0 +1,15 @@
+fun max (numlist : int list) : int =
+    if null numlist
+    then hd numlist
+    else
+	let
+	    val rest = min_max(tl numlist)
+	in
+	    if (hd numlist) > rest
+	    then hd numlist
+	    else rest
+
+		     
+		
+		
+    

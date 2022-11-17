@@ -1,0 +1,16 @@
+(* C-c, C-s*)
+(*
+Syntax: if e1 then e2 else e3, where if, then, and else are keywords and
+e1, e2, and e3 are subexpressions
+
+type-checking: first e1 must have type bool, e2 & e3 can have any type,
+but they must have the same type t
+the type of the entier expression is also t
+
+evaluation rules:
+first evaluate e1 to a value call it v1
+if its true, evaluate e2 and that result is the whole expressions resulst
+else, evaluate e3 and that result is the whole expression result 
+
+)*
+
