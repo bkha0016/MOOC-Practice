@@ -32,7 +32,13 @@ better resources than learning from this complicated book.</p> <br>
 A continutation from HtC-Simple which introduces more advance concept such as trees, graphs, localization, mutual recursion, abstraction, and many more. In my opinion, the instructor did far better explaining in HtC-Simple than in HtC-Complex. The assignments were tough, yet rewarding (looking at the final project). Due to the assignment being tough & time consuming, this course is not suitable in edX which they will cut off your access to this course if you go beyond the deadline. Therefore, I opted to watch HtC-Complex courses on Youtube.
 
 <p><strong>Course Rating: 6/10</strong></p>
+  
+<li> **Programming Languages Part A** </li> <br>
+For me, this course is hard because I personally never learn a common static programming languages like C++/Java. Hence, I struggled in many data types & let concepts. Furthermore, the whole course is a re-iteration of the HtC courses because many of the concept they teach in this class is similar. For example, currying, nested, map/filter, recomputation, mutual recursion, and tail recursion. However, the most memorable moment of this course is studying pattern matching which introduces a new cool concept in programming language. As I started to learn Java, I've found that Java also has a feature that is similar to pattern matching called switch & case. 
 
+ <li> **Programming Languages Part B** </li> <br>  
+  
+ <li> **Computer Science: Programming With A Purpose** </li> <br>
 </ol>
 
 
