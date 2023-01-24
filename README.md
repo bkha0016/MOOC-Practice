@@ -39,6 +39,10 @@ For me, this course is hard because I personally never learn a common static pro
  <li> **Programming Languages Part B** </li> <br>  
   
  <li> **Computer Science: Programming With A Purpose** </li> <br>
+I think this course has a similar vibe with the HtC courses with the twist being harder & more mathematical. I think this is by far the best course for java beginners because it teaches you everything from standard I/O to recursion & basic OOP. The questions here are way harder than the HtC courses because it revolves more on mathematics & physics rather than just your standard programming. Hence, thats why the course teaches you on how to solve problems in a computer science way rather than just teaching you normal programming concept (one of the reasons why that the name of this course is programming with a purpose). I think the most valuable moment I've learnt from this course is to think first before you code (you cannot code if you dont know the solution to this problem). Either way, this course also being taught by excellent instructors (Sedgewick & Wayne) provided with good & simple lecture slides.   
+ 
+<p><strong>Course Rating: 8.7/10</strong></p> 
+ 
 </ol>
 
 
