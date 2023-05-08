@@ -35,6 +35,8 @@ A continutation from HtC-Simple which introduces more advance concept such as tr
   
 <li> **Programming Languages Part A** </li> <br>
 For me, this course is hard because I personally never learn a common static programming languages like C++/Java. Hence, I struggled in many data types & let concepts. Furthermore, the whole course is a re-iteration of the HtC courses because many of the concept they teach in this class is similar. For example, currying, nested, map/filter, recomputation, mutual recursion, and tail recursion. However, the most memorable moment of this course is studying pattern matching which introduces a new cool concept in programming language. As I started to learn Java, I've found that Java also has a feature that is similar to pattern matching called switch & case. 
+  
+<p><strong>Course Rating: 7/10</strong></p>  
 
  <li> **Programming Languages Part B** </li> <br>  
 This course should be a breeze if you have finished with HtC courses. The challenging part of this course is the final assignment which you need to create your own language or something. I didnt even try to finish it because I already forgot how to do racket (LOL), so I just skimmed the lecture slides and ONLY do the first assignment. This course is kinda meh for me, I think part A has better lecture & assignments.
