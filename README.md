@@ -4,7 +4,7 @@ Computer Science MOOCs from coursera, edx, udemy, linkedin, etc
 <ol>
 
 <li>**Programming Foundatons with HTML,CSS,JavaScript from Duke**</li> <br>
-<p> In week 1 & 2, they will teach you on how to use HTML & CSS. While, in week 3 & 4, they will teach you how to use JavaScript to manipulate pixels. I dont think this course is for beginner because they introduce too many programming language at the same time. In addition, the instructor is also introducing for-loop principles in javascript without teaching the basic foundation of javascript such as operations/booleans. However, the good things about this course is the programming assignments/projects are fun & interesting!!! </p> <br>
+<p> In week 1 & 2, they will teach you on how to use HTML & CSS. While, in week 3 & 4, they will teach you how to use JavaScript to manipulate pixels. I dont think this course is for beginner because they introduce too many programming language at the same time. In addition, the instructor is also introducing for-loop principles in javascript without teaching the basic foundation of javascript such as operations/booleans. However, the good thing about this course is the programming assignments/projects because they are really fun & interesting!!! </p> <br>
 
 <p> <strong> Course Rating: 6/10 </strong> </p> <br>
 
