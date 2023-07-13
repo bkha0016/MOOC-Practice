@@ -93,6 +93,9 @@ Static  |        SML            |       Java
 Dynamic |      Racket           |       Ruby
 ======= | ======================|===================
 
+*you could even say that Ruby is the easier OOP version of Java
+
+
 =end
 
 class C 
