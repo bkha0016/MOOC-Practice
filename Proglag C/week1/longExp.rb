@@ -34,7 +34,7 @@ class MyRational
 
     end
 
-    def add! r #mutate self in-place
+    def add! r #mutate self in-place --> this is going to be a class object
         a = r.num # only works b/c of protected method below
         b = r.den # only works b/c of protected methods below
         c = @num
