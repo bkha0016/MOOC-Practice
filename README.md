@@ -1,6 +1,6 @@
 # MOOC-Courses
 OSSU (open source society university)
-Computer Science MOOCs from coursera, edx, udemy, linkedin, etc
+Computer Science MOOCs from coursera, edx, udemy, linkedin, MITOpenCourseWare etc
 <ol>
 
 <li>**Programming Foundatons with HTML,CSS,JavaScript from Duke**</li> <br>
@@ -48,6 +48,12 @@ I think this course has a similar vibe with the HtC courses with the twist being
  
 <p><strong>Course Rating: 8.7/10</strong></p> 
  
+ <li> **Programming Languages Part C** </li> <br>  
+In Progress......
+
+ <p><strong>Course Rating: ???/10</strong></p>  
+
+
 </ol>
 
 
