@@ -34,5 +34,21 @@ class String
 end
 
 
+# usage examples
+point1 = Pt.new
+point1.x = 3
+point1.y = 4
+
+point2 = Pt.new
+point2.x = 1
+point2.y = 2
+
+result = point1 + point2
+puts result.x #output 4
+puts result.y #output 6
+
+str = "Hello, "
+doubled_str = str.double
+puts doubled_str # ouput: "Hello, Hello,"
 
 
