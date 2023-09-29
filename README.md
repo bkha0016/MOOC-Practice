@@ -49,9 +49,14 @@ I think this course has a similar vibe with the HtC courses with the twist being
 <p><strong>Course Rating: 8.7/10</strong></p> 
  
  <li> **Programming Languages Part C** </li> <br>  
-In Progress......
+First part of the assignment was amazing because we are trying to fix a tetris code by applying the fundamentals of OOP (inheritance, private/public, overriding) to make the tetris code works again. The second assignment, I was lost because first you need to fix a small part of a code using SML, then you need to create a program about geometric shapes software using Ruby. 
 
- <p><strong>Course Rating: ???/10</strong></p>  
+ <p><strong>Course Rating: 7/10</strong></p> 
+
+ <li>Intro to Java: Fundamentals & OOP</li>
+ The entire course is on YouTube which they will taught you the ins/outs and features of the programming language called Java.
+
+
 
 
 </ol>
