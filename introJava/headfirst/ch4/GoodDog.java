@@ -1,10 +1,12 @@
 class GoodDog {
     private int size; // make the instance variable private
     
+    // getter method
     public int getSize() {
         return size;
     }
 
+    // setter method
     public void setSize(int s) {
         size = s;
     }
@@ -27,6 +29,12 @@ class GoodDogTestDrive {
         GoodDog one = new GoodDog();
         one.setSize(70);
         GoodDog two = new GoodDog();
-        two.setSize()
+        two.setSize(8);
+
+        System.out.println("Dog one: " + one.getSize());
+        System.out.println("Dog two: " + two.getSize());
+
+        one.bark();
+        two.bark();
     }
 }
