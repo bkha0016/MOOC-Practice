@@ -54,7 +54,7 @@ First part of the assignment was amazing because we are trying to fix a tetris c
  <p><strong>Course Rating: 7/10</strong></p> 
 
  <li>Intro to Java: Fundamentals & OOP</li>
- The entire course is on YouTube which they will taught you the ins/outs and features of the programming language called Java.
+ The entire course is on YouTube which they will taught you the ins/outs and features of the programming language called Java. However, I will use the headfirst java book as a resource too (so far, the book is super good & entertaining)
 
 
 
