@@ -20,4 +20,18 @@
 
 public class Animal {
 
+    /*
+    * Animal has a picture/image, food, hunger, boundaries, and location 
+    * Animal can makeNoise(), eat(), sleep(), and roam()
+    */
+
+    // TALK ABOUT THE SUBCLASSES & SUPERCLASSES
+    /*
+    * Feline is a animal
+    * Lion, Tiger, and cat is a feline and also an animal 
+    * Hippo is an animal
+    * Wolf, Dog is a canine and also a animal
+    */
+
+
 }
