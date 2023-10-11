@@ -1,69 +1,55 @@
 # MOOC-Courses
-OSSU (open source society university)
-Computer Science MOOCs from coursera, edx, udemy, linkedin, MITOpenCourseWare etc
-<ol>
+**Open Source Society University (OSSU)**
 
-<li>**Programming Foundatons with HTML,CSS,JavaScript from Duke**</li> <br>
-<p> In week 1 & 2, they will teach you on how to use HTML & CSS. While, in week 3 & 4, they will teach you how to use JavaScript to manipulate pixels. I dont think this course is for beginner because they introduce too many programming language at the same time. In addition, the instructor is also introducing for-loop principles in javascript without teaching the basic foundation of javascript such as operations/booleans. However, the good thing about this course is the programming assignments/projects because they are really fun & interesting!!! </p> <br>
+Discover a variety of Computer Science MOOCs from platforms like Coursera, edX, Udemy, LinkedIn, and MIT OpenCourseWare. Below, I've provided brief overviews and personal ratings for each course.
 
-<p> <strong> Course Rating: 6/10 </strong> </p> <br>
+### **Programming Foundations with HTML, CSS, and JavaScript - Duke University**
+In the first two weeks, this course focuses on HTML and CSS, while the following two weeks dive into JavaScript for pixel manipulation. It's worth noting that this course might not be suitable for complete beginners, as it introduces multiple programming languages simultaneously. However, it shines in the realm of programming assignments and projects, offering an enjoyable and engaging learning experience.
 
-<li> **Python Classes Inheritance - U-Michigan** </li> <br>
-<p>The course is pretty easy & straightforward. You will learn how to use classes, inhertiance, changing/renewing methods in a new class you made. 
-The most memorable moments from this course
-is implementing python classes to make a pokemon & wheel of fortune game. </p> <br>
+**Course Rating: 6/10**
 
-<p> <strong> Course Rating: 7/10 </strong> </p> <br>
+### **Python Classes Inheritance - University of Michigan**
+This course is straightforward and easy to follow, covering classes, inheritance, and method modifications within new classes. Notably, it provides hands-on experience creating Python programs like Pokémon and Wheel of Fortune games.
 
-<li> **Runestone Academy with Algorithm & Data Structure in Python** </li> <br>
-<p>This course will teach you the basics of data structure & algorithm commonly used in computer science
-using python as the programming language.
-I completed this textbook up until binary search trees & graph sections. I would not study BST & graph using this book because they explain it poorly. There are far
-better resources than learning from this complicated book.</p> <br>
+**Course Rating: 7/10**
 
-<p><strong>Course Rating: 5/10</strong></p><br>
+### **Runestone Academy: Algorithm & Data Structures in Python**
+This course offers a solid foundation in data structures and algorithms commonly used in computer science, with Python as the programming language of choice. However, the explanations for binary search trees and graph sections might not be the best. Better resources are available for learning these topics.
 
-<li> **How to code - Simple** </li> <br>
-<p> This course is definitely for programming beginners and a concept refresher for functional programming. The first part (HtC-Simple) is really a well-made computer science course because it introduces you to the world of Computer Science by teaching its programming concept through variety & fun assignments. One of the most memorable moment in this course is coding to create a rain simulation & a cat game. However, the only downside of this course is using a programming language called Racket which is not widely used in the industry. </p>  
+**Course Rating: 5/10**
 
-<p><strong>Course Rating: 8.5/10</strong></p>
+### **How to Code - Simple**
+Ideal for programming beginners, this course provides a concept refresher for functional programming. It excels in introducing programming concepts through diverse and enjoyable assignments. However, it employs the less widely-used Racket programming language, which may limit its industry applicability.
 
-<li> **How to code - Complex** </li> <br>
-A continutation from HtC-Simple which introduces more advance concept such as trees, graphs, localization, mutual recursion, abstraction, and many more. In my opinion, the instructor did far better explaining in HtC-Simple than in HtC-Complex. The assignments were tough, yet rewarding (looking at the final project). Due to the assignment being tough & time consuming, this course is not suitable in edX which they will cut off your access to this course if you go beyond the deadline. Therefore, I opted to watch HtC-Complex courses on Youtube.
+**Course Rating: 8.5/10**
 
-<p><strong>Course Rating: 6/10</strong></p>
-  
-<li> **Programming Languages Part A** </li> <br>
-For me, this course is hard because I personally never learn a common static programming languages like C++/Java. Hence, I struggled in many data types & let concepts. Furthermore, the whole course is a re-iteration of the HtC courses because many of the concept they teach in this class is similar. For example, currying, nested, map/filter, recomputation, mutual recursion, and tail recursion. However, the most memorable moment of this course is studying pattern matching which introduces a new cool concept in programming language. As I started to learn Java, I've found that Java also has a feature that is similar to pattern matching called switch & case. 
-  
-<p><strong>Course Rating: 7/10</strong></p>  
+### **How to Code - Complex**
+Continuing from "How to Code - Simple," this course delves into advanced concepts, such as trees, graphs, localization, mutual recursion, and abstraction. While the assignments are challenging, they offer rewarding experiences. Note that the course can be time-consuming and should be completed within the given deadlines.
 
- <li> **Programming Languages Part B** </li> <br>  
-This course should be a breeze if you have finished with HtC courses. The challenging part of this course is the final assignment which you need to create your own language or something. I didnt even try to finish it because I already forgot how to do racket (LOL), so I just skimmed the lecture slides and ONLY do the first assignment. This course is kinda meh for me, I think part A has better lecture & assignments.
+**Course Rating: 6/10**
 
- <p><strong>Course Rating: 6/10</strong></p>  
-  
- <li> **Computer Science: Programming With A Purpose** </li> <br>
-I think this course has a similar vibe with the HtC courses with the twist being harder & more mathematical. I think this is by far the best course for java beginners because it teaches you everything from standard I/O to recursion & basic OOP. The questions here are way harder than the HtC courses because it revolves more on mathematics & physics rather than just your standard programming. Hence, thats why the course teaches you on how to solve problems in a computer science way rather than just teaching you normal programming concept (one of the reasons why that the name of this course is programming with a purpose). I think the most valuable moment I've learnt from this course is to think first before you code (you cannot code if you dont know the solution to this problem). Either way, this course also being taught by excellent instructors (Sedgewick & Wayne) provided with good & simple lecture slides. After finishing this course, I probably enroll in their next java class called machine & theory (its either this or the UHelnski Java OOP MOOC)
- 
-<p><strong>Course Rating: 8.7/10</strong></p> 
- 
- <li> **Programming Languages Part C** </li> <br>  
-First part of the assignment was amazing because we are trying to fix a tetris code by applying the fundamentals of OOP (inheritance, private/public, overriding) to make the tetris code works again. The second assignment, I was lost because first you need to fix a small part of a code using SML, then you need to create a program about geometric shapes software using Ruby. 
+### **Programming Languages Part A**
+This course can be challenging, especially if you have no prior experience with common static programming languages like C++ or Java. It covers various concepts similar to those in the "How to Code" courses. A standout feature is the study of pattern matching, introducing a new programming concept.
 
- <p><strong>Course Rating: 7/10</strong></p> 
+**Course Rating: 7/10**
 
- <li>Intro to Java: Fundamentals & OOP</li>
- The entire course is on YouTube which they will taught you the ins/outs and features of the programming language called Java. However, I will use the headfirst java book as a resource too (so far, the book is super good & entertaining)
+### **Programming Languages Part B**
+If you've completed the "How to Code" courses, this course should be manageable. The final assignment, involving the creation of your programming language, is the most challenging part. However, if you've forgotten the Racket programming language, this course may pose difficulties.
 
+**Course Rating: 6/10**
 
+### **Computer Science: Programming With A Purpose**
+This course shares similarities with the "How to Code" courses but delves deeper into mathematical and more complex concepts. It's an excellent choice for Java beginners, as it covers standard I/O, recursion, and basic OOP, with a strong focus on problem-solving in a computer science context.
 
+**Course Rating: 8.7/10**
 
-</ol>
+### **Programming Languages Part C**
+The first part of the assignment involves fixing a Tetris code using OOP principles. The second part may be challenging, involving code corrections using SML and creating a geometric shapes software using Ruby.
 
+**Course Rating: 7/10**
 
+### **Intro to Java: Fundamentals & OOP**
+This course is available on YouTube and covers Java comprehensively. Consider using the "Head First Java" book as a supplementary resource, as it provides an engaging and informative approach to learning Java.
 
-
-
-
+Overall, these courses offer a diverse range of experiences, from beginner-friendly options to more advanced challenges. Make your choice based on your proficiency level and personal preferences.
 
