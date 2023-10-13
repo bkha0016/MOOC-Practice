@@ -1,5 +1,3 @@
-import javax.sound.midi.SysexMessage;
-
 class MyAnimalList {
     private Animal[] animals = new Animal[5];
     private int nextIndex = 0;
@@ -14,12 +12,40 @@ class MyAnimalList {
 
     
 }
+/* 
+ * Interface methods are implicitly public and abstract
+ * So typing in public and abstract is optional in fact its not considered good style
+ * to type the words in, but we did here just to reinforce it 
+*/
+
+// you say 'interface' instead of 'class' here
+interface Pet {
+    public abstract void beFriendly(); // they have NO body!
+    public abstract void play(); // all interface methods are abstract so they must end in semicolons. Remember, they have no body!
+} 
 
 class Animal{
+    // For the superclass its fine to have a roam and eat that can be overriden later
+    public void roam() {}
 
+    public void eat() {}
 }
 
-class Dog extends Animal {
+// Dog is-a Animal & Dog is-a Pet
+class Dog extends Animal implements Pet {
+    // you must implement the pet methods, its your contract
+    // notice the curly braces instead of semicolons
+    public void beFriendly() {
+
+    }
+
+    public void play() {
+
+    }
+
+    public void roam() {} // normal overriding methods
+
+    public void eat() {}
 
 }
 
@@ -54,13 +80,6 @@ class AnimalTestDrive {
         System.out.println("toString()"); // prints out the string messsage with the name of the class and some other number we rarely care about
 
         System.out.println(cat.toString());
-
-
-
-
-
-
-
 
     }
 }

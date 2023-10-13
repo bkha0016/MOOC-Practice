@@ -4,7 +4,7 @@ public class MyDogList {
 
 
 public void add(Dog d) {
-    if (nextIndex < dog.length) {
+    if (nextIndex < dogs.length) {
         dogs[nextIndex] = d;
         System.out.println("Dog added at " + nextIndex);
         nextIndex++;
