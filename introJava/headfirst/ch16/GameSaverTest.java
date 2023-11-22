@@ -25,6 +25,7 @@ public class GameSaverTest {
             GameCharacter oneRestore = (GameCharacter) is.readObject();
             GameCharacter twoRestore = (GameCharacter) is.readObject();
             GameCharacter threeRestore = (GameCharacter) is.readObject();
+            is.close();
 
             System.out.println("One's type: " + oneRestore.getType());
             System.out.println("Two's type: " + twoRestore.getType());
