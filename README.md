@@ -51,5 +51,8 @@ The first part of the assignment involves fixing a Tetris code using OOP princip
 ### **Intro to Java: Fundamentals & OOP**
 This course is available on YouTube and covers Java comprehensively. Consider using the "Head First Java" book as a supplementary resource, as it provides an engaging and informative approach to learning Java.
 
-Overall, these courses offer a diverse range of experiences, from beginner-friendly options to more advanced challenges. Make your choice based on your proficiency level and personal preferences.
+Overall, these courses offer a diverse range of experiences, from 
+beginner-friendly options to more advanced challenges. Make your choice 
+based on your proficiency level and personal preferences. (Almost complete 
+with this book![on the last chapter])
 
