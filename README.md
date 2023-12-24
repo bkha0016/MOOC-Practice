@@ -1,4 +1,4 @@
-# MOOC-Courses
+# MOOC-Courses ~ Ongoing Projects
 **Open Source Society University (OSSU)**
 
 Discover a variety of Computer Science MOOCs from platforms like Coursera, edX, Udemy, LinkedIn, and MIT OpenCourseWare. Below, I've provided brief overviews and personal ratings for each course.
