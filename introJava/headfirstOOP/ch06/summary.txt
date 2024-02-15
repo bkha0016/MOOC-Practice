@@ -1,0 +1,30 @@
+You solve big problems the same way you solve small problems:
+1. Make sure your software does what the customer wants it to do
+2. Apply basic OO principles to add flexibility
+3. Strive for a maintainable, reusable design
+
+*You can solve a big problem by breaking it into lots of functional pieces, 
+and then working on each of those pieces individually
+
+*By encapsulating what varies, you make your app more flexible and easier to change
+
+*Coding to an interface, rathter than to an implementation, makes your software easier to extend
+
+*The best way to get good requirements is to understand what a system is supposed to do
+
+*Analysis helps you ensure your system works in a real-world context
+
+*Great software is easy to change and extend, and does what the customer wants it to do
+
+*Get features from the customer, and then figure out the requirements you need to implement those features
+
+*Dont get hung up on the "difference" between a feature and requirement
+
+*Use cases don't always help you see the big picture -> Always defer details as long as you can
+
+*You still need to know what your system is supposed to do... but you need a BIG-PCITURE view
+
+*Domain analysis lets you check your designs, and still speak the customer's language
+
+
+
