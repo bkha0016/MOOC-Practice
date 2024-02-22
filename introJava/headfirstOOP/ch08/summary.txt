@@ -1,0 +1,11 @@
+Rather than using inhertiance in OOP, you can use others to make it better like:
+- Delegation
+- Association
+- Composite
+- Aggregate
+
+OO toolkits:
+- LSP (Liskov Substitution Principle)
+- Don't Repeat Yourself (DRY)
+- Single Responsibility Purpose (SRP)
+- OCP (open-closed principle)
