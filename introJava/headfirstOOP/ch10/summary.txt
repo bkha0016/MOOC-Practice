@@ -1,0 +1,10 @@
+Objectville RouteFinder (FeatureList)
+- We have to be able to represent a subway line and the stations along that line
+- We must be able to load multiple subway lines into the program, including overlapping lines
+- We need to be able to figure out a valid path between any two stations on any lines
+- We need to be able to print out a route between two stations as a set of directions
+
+Your feature lists are all about understading what your software is supposed to do.
+Your use case diagrams let you start thinking about how your software will be used, without getting into a bunch of unnecessary details
+
+The features in your system are what the system does and are not always reflected in your use cases, which show how the system is used. Features and use cases work together, but they are not the same thing.
