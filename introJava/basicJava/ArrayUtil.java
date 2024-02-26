@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArrayUtil {
     public void printArray(int[] arr) {
         int n = arr.length;
@@ -77,6 +79,11 @@ public class ArrayUtil {
         System.out.println("Finds a missing number");
         int[] testArray2 = {2, 4, 1, 8, 6, 3, 7};
         System.out.println(findMissingNumber(testArray2));
+
+        System.out.println("Checking for palindrome");
+        System.out.println(isPalindrome("madam"));
+        System.out.println(isPalindrome("that"));
+
 
 
 
@@ -271,6 +278,24 @@ public class ArrayUtil {
         }
 
         return sum;
+    }
+
+    // Create a method that cheks whether a string is palindrome or not
+
+    public boolean isPalindrome(String word) {
+        char[] charArray = word.toCharArray();
+        int start = 0;
+        int end = word.length() - 1;
+
+        while (start < end) {
+            if (charArray[start] != charArray[end]) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+
     }
 
 
