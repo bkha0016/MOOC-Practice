@@ -309,6 +309,23 @@ public class singlyLinkedList {
         return head;
     }
 
+    // Remove a given key from singly linked list
+    public void removeKey(int key) {
+        ListNode current = head;
+        ListNode temp = null;
+
+        while (current != null && current.data != key) {
+            temp = current;
+            current = current.next;
+        }
+
+        if (current == null) {
+            return;
+        }
+        
+        temp.next = current.next;
+    }
+
 
 
     // Insert node at a given position. Assuming position to be valid & starting from 1
