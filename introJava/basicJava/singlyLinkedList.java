@@ -371,6 +371,167 @@ public class singlyLinkedList {
         return false;
     }
 
+    // Detect a loop in SSL
+    public boolean containsLoop() {
+        ListNode fastPtr = head;
+        ListNode slowPtr = head;
+
+        while(fastPtr != null && fastPtr.next != null) {
+            fastPtr = fastPtr.next.next;
+            slowPtr = slowPtr.next;
+
+            if(slowPtr == fastPtr) {
+                return true;
+            }
+
+        }
+
+        return false;
+        
+
+    }
+
+    // start node in a loop
+    public ListNode startNodeInALoop() {
+        ListNode fastPtr = head;
+        ListNode slowPtr = head;
+
+        while(fastPtr != null && fastPtr.next != null) {
+            fastPtr = fastPtr.next.next;
+            slowPtr = slowPtr.next;
+
+            if(slowPtr == fastPtr) {
+                return getStartingNode(slowPtr);
+            }
+
+        }
+
+        return null;
+        
+
+    }
+
+    public void removeLoopInSSL() {
+        ListNode fastPtr = head;
+        ListNode slowPtr = head;
+
+        while(fastPtr != null && fastPtr.next != null) {
+            fastPtr = fastPtr.next.next;
+            slowPtr = slowPtr.next;
+
+            if(slowPtr == fastPtr) {
+                removeLoop(slowPtr);
+                return;
+            }
+
+        }    
+
+    }
+
+    public void removeLoop(ListNode slowPtr) {
+        ListNode temp = head;
+        while (temp.next != slowPtr.next) {
+            temp = temp.next;
+            slowPtr = slowPtr.next;
+        }
+
+        slowPtr.next = null;
+    }
+
+
+    private ListNode getStartingNode(ListNode slowPtr) {
+        ListNode temp = head;
+        while (temp != slowPtr) {
+            temp = temp.next;
+            slowPtr = slowPtr.next;
+        }
+
+        return temp; // starting node of the loop
+
+    }
+
+    // Merge two sorted list node
+    public static ListNode merge(ListNode a, ListNode b) {
+        // a --> 1 --> 3 --> 5 --> null
+        // b --> 2 --> 4 --> 6 --> null
+        // result --> 1 --> 2 --> 3 --> 4 --> 5 --> 6 --> null
+        ListNode dummy = new ListNode(0);
+        ListNode tail = dummy;
+
+        while (a != null && b != null) {
+            if(a.data <= b.data) {
+                tail.next = a;
+                a = a.next;
+            } else {
+                tail.next = b;
+                b = b.next;
+            }
+            tail = tail.next;
+        }
+
+        // a --> 1 --> 3 --> null
+        // b --> 2 --> 4 --> 6 --> 7 --> 9 --> 10 --> null
+        // result --> 1 --> 2 --> 3 --> 4 --> 6 --> 7 --> 9 --> 10 --> null
+
+        if (a == null) {
+            tail.next = b;
+        } else {
+            tail.next = a;
+        }
+
+        return dummy.next;
+
+
+    }
+
+    // LeetCode #2 : Adding two numbers
+    // Assume two numbers do not contain any leading zero, except the number 0 itself
+    // digits are stored in reverse order and each of their nodes contains a single digit
+    // Add the two numbers and return the sum as a linked list
+    public static ListNode add(ListNode a, ListNode b) {
+        ListNode dummy = new ListNode(0);
+        ListNode tail = dummy;
+        int carry = 0;
+
+        while (a != null || b != null) {
+            int x = (a != null) ? a.data : 0;
+            int y = (b != null) ? b.data : 0;
+            int sum = carry + x + y;
+            carry = sum / 10;
+            tail.next = new ListNode(sum % 10);
+            tail = tail.next;
+            if (a != null) a = a.next;
+            if (b != null) b = b.next;
+
+        }
+
+        if (carry > 0) {
+            tail.next = new ListNode(carry);
+        }
+
+        return dummy.next;
+    }
+
+
+
+
+
+
+    public void createALoopInLinkedList() {
+        ListNode first = new ListNode(1);
+        ListNode second = new ListNode(2);
+        ListNode third = new ListNode(3);
+        ListNode fourth = new ListNode(4);
+        ListNode fifth = new ListNode(5);
+        ListNode sixth = new ListNode(6);
+
+
+    
+
+
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -426,7 +587,27 @@ public class singlyLinkedList {
         sll.removeDuplicatedSorted();
         sll.display();
 
-        
+        singlyLinkedList sll2 = new singlyLinkedList();
+        sll2.head = new ListNode(1);
+        sll2.insertFirst(2);
+        sll2.insertFirst(3);
+        sll2.insertFirst(4);
+        sll2.insertFirst(5);
+        sll2.display();
+
+        singlyLinkedList sll3 = new singlyLinkedList();
+        sll3.head = new ListNode(1);
+        sll3.insertFirst(2);
+        sll3.insertFirst(3);
+        sll3.insertFirst(4);
+        sll3.insertFirst(2);
+        sll3.display();
+
+        singlyLinkedList sll4 = new singlyLinkedList();
+
+        sll4.head = add(sll3.head, sll2.head);
+        sll4.display();
+
 
 
     }
