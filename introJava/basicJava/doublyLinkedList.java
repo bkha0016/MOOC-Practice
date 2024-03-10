@@ -134,7 +134,7 @@ public class doublyLinkedList {
             tail.previous.next = null;
         }
         tail = tail.previous;
-        temp.next = null;
+        temp.previous = null;
         return temp;
     }
 

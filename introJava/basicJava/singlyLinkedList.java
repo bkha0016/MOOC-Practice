@@ -377,8 +377,8 @@ public class singlyLinkedList {
         ListNode slowPtr = head;
 
         while(fastPtr != null && fastPtr.next != null) {
-            fastPtr = fastPtr.next.next;
-            slowPtr = slowPtr.next;
+            fastPtr = fastPtr.next.next; //2x (double the speed)
+            slowPtr = slowPtr.next; // x (a single constant speed)
 
             if(slowPtr == fastPtr) {
                 return true;
