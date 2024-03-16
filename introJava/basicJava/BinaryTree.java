@@ -1,4 +1,6 @@
 import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree {
 
@@ -132,10 +134,104 @@ public class BinaryTree {
             }
 
         }
-        System.out.println(" ");
+        
 
 
     }
+
+    public void levelOrder() {
+        if (root == null) {
+            return;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while(!queue.isEmpty()) {
+            TreeNode temp = queue.poll();
+            System.out.print(temp.data + " ");
+            if (temp.left != null) {
+                queue.offer(temp.left);
+            }
+            if (temp.right != null) {
+                queue.offer(temp.right);
+            }
+        }
+
+    }
+
+    public int recursiveFindMax() {
+        return recursiveFindMax(root);
+    }
+
+    public int recursiveFindMax(TreeNode root) {
+        if(root == null) {
+            return Integer.MIN_VALUE;
+        }
+
+        int result = root.data;
+        int left = recursiveFindMax(root.left);
+        int right = recursiveFindMax(root.right);
+        if (left > result) {
+            result = left;
+        }
+        if (right > result) {
+            result = right;
+        }
+        return result;
+    }
+    // Implement a find max using level order traversal
+
+    public int levelOrderFindMax() {
+        if (root == null) {
+            return Integer.MIN_VALUE;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        int result = root.data;
+
+        while(!queue.isEmpty()) {
+            TreeNode temp = queue.poll();
+            if (temp.data > result) {
+                result = temp.data;
+            }
+            if (temp.left != null) {
+                queue.offer(temp.left);
+            }
+            if (temp.right != null) {
+                queue.offer(temp.right);
+            }
+        }
+
+        return result;
+
+    }
+
+    public int levelOrderFindMin() {
+        if (root == null) {
+            return Integer.MAX_VALUE;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        int result = root.data;
+
+        while(!queue.isEmpty()) {
+            TreeNode temp = queue.poll();
+            if (temp.data < result) {
+                result = temp.data;
+            }
+            if (temp.left != null) {
+                queue.offer(temp.left);
+            }
+            if (temp.right != null) {
+                queue.offer(temp.right);
+            }
+        }
+
+        return result;
+
+
+    }
+
 
     public static void main(String[] args) {
         BinaryTree testTree = new BinaryTree();
@@ -151,6 +247,14 @@ public class BinaryTree {
         testTree.recursivePostOrder(testTree.root); // 4 2 3 9
         System.out.println(" ");
         testTree.postOrder(); // 4 2 3 9
+        System.out.println(" ");
+        testTree.levelOrder(); // 9 2 3 4
+        System.out.println(" ");
+        System.out.print(testTree.recursiveFindMax()); // 9 
+        System.out.println(" ");
+        System.out.print(testTree.levelOrderFindMax()); // 9
+        System.out.println(" ");
+        System.out.print(testTree.levelOrderFindMin());
 
         
     }
