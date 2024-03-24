@@ -215,6 +215,28 @@ public class SortingAlgorithm {
         return arr;
     }
 
+    public int[] arrangeMaxMin(int[] arr) {
+        int maxIdx = arr.length - 1;
+        int minIdx = 0;
+        int max = arr[maxIdx] + 1;
+
+        for(int i = 0; i < arr.length; i++) {
+            if(i % 2 == 0) {
+                arr[i] = arr[i] + (arr[maxIdx] % max) * max;
+                maxIdx--;
+            } else {
+                arr[i] = arr[i] + (arr[minIdx] % max) * max;
+                minIdx++;
+            }
+        }
+
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = arr[i] / max;
+        }
+
+        return arr;
+    }
+
 
 
 
@@ -225,6 +247,7 @@ public class SortingAlgorithm {
         int[] unsortedArr = {5, 1, 9, 2, 10};
         int[] unsortedArr2 = {7, 8, 12, 4, 3, 6};
         int[] unsortedArr3 = {1, 0, 2, 0, 1, 2, 2, 1, 0};
+        int[] sortedArr = {2, 3, 5, 6, 8, 9};
 
         System.out.println(Arrays.toString(sortAlgo.BubbleSort(unsortedArr)));
         System.out.println(Arrays.toString(sortAlgo.InsertionSort(unsortedArr)));
@@ -233,6 +256,7 @@ public class SortingAlgorithm {
         System.out.println(Arrays.toString(sortAlgo.MergeSort(unsortedArr, new int[unsortedArr.length], 0, unsortedArr.length - 1)));
         System.out.println(Arrays.toString(sortAlgo.threeNumberSort(unsortedArr3)));
         System.out.println(Arrays.toString(sortAlgo.QuickSort(unsortedArr, 0, unsortedArr.length - 1)));
+        System.out.println(Arrays.toString(sortAlgo.arrangeMaxMin(sortedArr)));
         
     }
 }
