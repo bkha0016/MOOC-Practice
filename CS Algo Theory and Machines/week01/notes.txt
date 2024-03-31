@@ -1,0 +1,39 @@
+A typical client: Whitelist filter
+- A blacklist is a list of entities to be rejected for service
+- A whitelist is a list of entities to be accepted for service
+
+whiteliest filter
+- read a list of strings from a whitelist file
+- read strings from stdin and write to stdout only those in the whitelist
+
+
+using compareTo method is useful in this case because it turns string into numbers based on the
+return Integer value of its comparison. Will be useful if you want to make a method that accepts multiple types (generic)
+
+Binary Sort:
+- Works with sorted arrays
+- Big O notation is log(n)
+- Halves the searching
+- can do it through recursive or non-recursive ways
+
+Insertion Sort:
+- Moves down through the array.
+- Each item bubbles up above the larger ones above it
+- Everything above the current item is in order
+- Everything below the current item is untouched
+- Big O notation is N**2
+
+
+Need algorithms that scale to keep pace with Moore's law
+
+Merge Sort:
+- Divide array into two halves
+- Recursively sort each half
+- Merge two halves to make sorted whole
+
+Abstract inplace merge
+- Merge a[lo, mid) with a [mid, hi)
+- Use auxiliary array for result
+- Copy back when merge is complete
+
+
