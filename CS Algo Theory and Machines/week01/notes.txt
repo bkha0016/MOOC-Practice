@@ -37,3 +37,8 @@ Abstract inplace merge
 - Copy back when merge is complete
 
 
+Summary:
+- Binary Search: Efficient algorithm to search a sorted array
+- Merge Sort: Efficient algorithm to sort an array
+- Applications: Many, many, many things are enabled by fast sort and search
+
