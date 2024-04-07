@@ -1,0 +1,76 @@
+Symbol tables:
+
+*Bottom line, need more of a flexible API
+
+Associative array abstraction
+- Imagine using arrays whose indices are <em>string</em> values
+
+A fundamental abstraction
+- Use keys to access associated values
+- Keys and values could be any type of data
+- Client code could not be simpler
+
+Symbol table ADT:
+- A symbol table is an ADT whose values are sets of key-value pairs, with keys all different
+
+Basic symbol-table operations
+- Associate a given key with a given value
+[if the key is not in the table, add it to the table]
+[if the key is in the table, change its value.]
+- Return the value associated with a given key
+- Test if a given key is in the table
+- Iterate through the keys
+
+Useful additional assumptions
+- Keys are comparable and iteration in order
+- No limit on number of key-value pairs
+- All keys not in the table associate with null
+
+Parameterized API for symbol tables
+Goal: simple, safe, and clear client code for symbol tables holding any type of data
+
+Java approach: generics
+- use placeholder type names for both keys and values
+- substitute concrete types for placehoder in clients
+
+Doubly-linked data structures
+- With two links a wide variety of data structures are possible
+
+Binary search tree (BST)
+- A recursive data structure containing distinct comparable keys that is ordered
+- Def A BST is a null or a reference to a BST node (the root)
+- Def A BST  node is a data type that contains references to a key, a value, and two BSTs, a left subtree and a right subtree
+- Ordered. All keys in the left subtree of each node are smaller than its key and all keys in the right subtree of each node are larger than its key
+
+Goal. Associate a new value with a given key in a BST
+- If less than the key at the current node, go left.
+- If greater than the key at the current node, go right.
+
+
+BST insertion: random order visualization
+- Insert keys in random order
+-- Tree is roughly balanced
+-- Tends to stay that way!
+
+
+BST performance
+pratical problem: keys may not be randomly ordered
+- BST may become unbalanced
+- running time may be quadratic
+- Happens in practice (insert keys in order)
+
+Remarkable resolution
+- Balanced tree algorithms perform simple transformations that guarantee balance.
+- AVL trees proved concept
+- Red-black trees are implement in many modern systems.
+
+Insert keys in random order
+- Same # of black links on every path
+- No two red links in a row
+- Tree is nearly balanced
+- Guaranteed to stay that way!
+
+
+
+
+

@@ -1,0 +1,82 @@
+==============
+INTRACTABILITY
+==============
+
+Fundamental Questions
+- What is a general-purpose computer?
+- Are there limits on what we can do with digital computers?
+- Are there limits on what we can di wutg the machines we can build
+
+Traveling salesperson problem (TSP)
+- Given: A set of N cities, distances between each pair of cities, and a threshold M
+- Problem: Is there a tour through all the cities of length less than M?
+
+Model computation
+- Running time: Number of steps as a function of input size N
+- Poly-time: running time less than aNb for some constans a and b
+- Definitely not poly-time: Running time ~Cn for any constant c > 1
+- Specific computer generally not relevant (simulations uses only a polynomial factor)
+
+A problem is intractable if no efficient algorithm exists to solve it
+
+Is there an easy way to tell whether a problem is intractable?
+- Sorting (not intractable)
+- TSP (no efficient algorithm known,, but no proof that none exists?)
+
+Four fundamental problems
+- LSOLVE
+-- Solve simultaneous linear equations
+-- Variables are real numbers
+
+- LP
+-- Solve simultaneous linear inequalities
+-- Variables are real numbers
+
+- ILP
+-- Solve simultanoues linear inequalities
+-- Variables are 0 or 1
+
+- SAT
+-- Solve simultaneous boolean sums
+-- Variables are true or false
+
+NP
+- the class of all search problems
+
+Significance. Problems that scientits, engineers, and applications programmers aspire to solve
+
+Brute-force search. Given a search problem, find a solution by checking all possibilities (easy to implement, but no efficient at all)
+
+P
+- the class of tractable search probelms
+
+Significance. Problems that scientists, engineers, and applications programmers do solve
+
+P != NP
+- Intractable search problem exist
+- Brute force search may be the best we can do for some problem
+
+P == NP
+- All search problems are tractable
+- Efficient algorithms exist for IP, SAT, FACTOR, all problems in NP
+
+Frustating situations. No one has been able to prove that creating a solution to a problem is more difficult than checking that it is correct
+
+NP-complete: A provably efficient algorithm for any one of them would yield a provably efficient algorithm for all of them
+
+
+Summary:
+- NP -> class of all search problems, some of which seem solvable only by brute force
+- P -> class of search problems solvable in poly time
+
+NP-complete. "Hardest" problems in NP.
+Intractable. Search problems not in P (if P != NP)
+
+TSP, SAT, ILP, and thousands of other problems are NP- complete
+
+use theory as a guide
+- An efficient algorithm for an NP-complete program would be a stunning scientific breakthrough (a proof that P = NP)
+- You will confront NP-complete problems in your career
+- It is safe to assume that P != NP and that such problems are intractable
+
+

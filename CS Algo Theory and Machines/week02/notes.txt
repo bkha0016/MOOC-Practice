@@ -1,0 +1,125 @@
+Data Types
+- Set of values
+- Set of operations on those values
+- Some are built in to Java: int, double, String,...
+- Most are not: Complex, Picture, Charge,...
+
+Data Structures:
+- Represent data
+- Represent relationships among data
+- Some are built in to java
+- Most are not: linked list, circular list, tree
+
+Design challenge for every data type: Which data structure to use?
+- Resource 1: How much memory is needed?
+- Resource 2: How much time do data-type methods use
+
+Stack & Queue APIs
+- A collection is an ADT whose values are a multiset of items, all of the same type
+- Two fundamental collection ADTs differ in just a detail of the specification of their operations.
+
+Stack operation
+- Add an item to the collection
+- Remove and return the item most recently added(LIFO)
+- Test if the collection is empty
+- Return the size of the collection
+
+Queue Operations
+- Add an item to the collection
+- Remove and return the item least recenlty added (FIFO)
+- Test if the collection is empty
+- Return the size of the collection
+
+*Stacks and queues both arise naturally in countries applications
+*A key characteristics. No limit on the size of the collection
+
+Parameterized data types
+Goal: Simple, safe, and clear client code for collections of any type of data
+Java approach: Parameterized data types (generics)
+- Use placeholder type name in definition
+- Substitute concrete type for placeholder in clients
+
+Challenge: provide guarantees on performance
+Goal. Simple, safe, clear, and efficient client code
+All operations are constant-time
+Memory use is linear in the size of the collection, when in its non empty
+
+Stack & Queue implementations:
+- Queues:
+-- Firs come first servedd resource allocation
+-- Async data transfers
+-- Dispensing requests on a shared resource
+-- simulations of the real world
+
+- Stacks:
+-- Last come first served resource allocations
+-- function calls in programming langauges
+-- Basic mechanisms in intrepeters, compilers
+-- Fundamental abstraction in computing
+-- "Back" button in a browser
+
+Autoboxing
+
+challenge. Use primitive type in a parameterized ADT
+
+Wrapper types:
+- Each primitive type has a wrapper reference type
+- Wrapper type has larger set of operations than primitive type (e.g. Integer.parseInt())
+- Instances of wrapper types are objects
+- Wrapper type can be used in a parameterized ADT
+
+Autoboxing. Automatic cast from primitive type to wrapper type
+Auto-unboxing. Automatic cast from wrapper type to primitive type
+
+
+Stack<Integer> stack = new Stack<Integer>();
+stack.push(17); // Autobox (int -> Integer)
+int a = stack.pop() // Auto-unbox (Integer -> int)
+
+Strawman ADT for pushdown stacks
+
+Warmup: simplify the ADT
+- Implement only for items of type String.
+- Have client provide a stack capacity in the constructor
+
+
+sequentival vs linked
+Sequential data structure:
+- Put objects next to one another
+- Machine: consecutive memory cells
+- Java: array of objects
+- Fixed size, arbitary access // ith element
+
+Linked Data structure
+- Associate with each object a link to another one
+- Machine: link is memory address of next object
+- Java: link is reference to next object
+- Variable size, sequential access // next element
+- Overlooked by novice programmers
+- Flexible, widely used method for organizing data
+
+Linked List
+- a recursive data structure
+- a linked list is null or a referece to a node
+- a node is a data type that contains a reference to a node
+- unwind recursion: a linekd list is a sequnce of nodes
+
+Representation:
+- use a private nested class node to implement the node abstraction
+- for simplicity, start with nodes haveing two values: a String and a Node
+
+Singly-linked data structure
+- Even with just one link a wide variety of data structures are possible
+- Linked list, tree, circular list, tree, graph, rho
+
+Standard operations for processign data structured as a singly linked list
+- Add a node at the beginning
+- Remove and return the node at the beginning
+- Add a node at the end
+- Traverse the list
+
+
+1 -> 2 -> 3 -> 4 -> 5
+x.next = x.next.next;
+x = 1
+x.next = 3 (skipping 2)

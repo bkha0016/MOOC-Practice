@@ -1,0 +1,92 @@
+=======================================
+INTRODUCTION TO THE THEORY OF COMPUTING
+=======================================
+
+Fundamental questions
+- What can computer do?
+- What can a computer do with limited resources?
+
+General approach
+- Don't talk about specific machines or problems
+- Consider minimal abstract machines
+- Consider general classes of problems
+
+Suprising outcome. Sweeping and relevant statements about all computers
+
+In theory
+- Deeper understanding of computations
+- Foundation of all modern computers
+- Pure Science
+- Philosophical implications
+
+In practice
+- Web search: theory of pattern matching
+- Sequential circuits: theory of finite state automata
+- Compilers: theory of context free grammars
+- Cryptography: theory of computational complexity
+- Data compression: theory of information
+
+Abstract Machine
+- Mathematical model of computation
+- Each machine defined by specific rules for transforming input to output
+- This lecture: Deterministic finite automata (DFAs)
+
+Formal Language
+- A set of strings
+- Each defined by specfic rules that characterize it
+- This lecture: Regular expressions (REs)
+
+Pattern matching
+- Is a given string an element of a given set of strings
+- e.g. -> computational biochemistry, e-mail (commercial computing), genomics
+
+A regular expression (RE) is a notation for specifying a set of strings (a formal language)
+An RE is either
+- The empty set
+- The empty string
+- A single character or wildcard symbol
+- An RE enclosde in parantheses
+- The concatenation of two or more REs
+- The union of two or more REs
+- The closure of an RE (any number of occurences)
+
+Another example of describing a pattern with a generalzied RE
+An e-mail address is
+- A sequence of letters, followed by 
+- the character "@", followed by
+- the character ".", followed by a non empty sequence of lowercase letters, followed by
+- [any number of occurences of the previous pattern]
+- "edu" or "com" (others omitted for brevity)
+
+--> [a-z]+@([a-z]+\.)+(edu|com)
+
+Deterministic Finite Automata (DFA)
+- A DFA is an abstract machine that solves a pattern matching problem
+-- A string is specified on a input tape (no limit on its length).
+-- The DFA reads each character on input tape once, moving left to right.
+-- The DFA lights "YES" if it recognized the string, "NO" otherwise
+- Each DFA defines a language (the set of strings that it recognizes)
+
+An algorithm for the RE pattern matching problem?
+- Build the DFA corresponding to the given RE
+- Simulate the operation of the DFA
+
+Practical Difficulty: The DFA might have exponentially many states
+
+A more efficient algoritm: use nondeterministic finite automate (NFA)
+- Build the NFA corresponding to the given RE
+- Simulate the operation of the NFA
+
+Beyond matching
+- Java's String class contains other useful RE-related methods
+-- RE seach and replace
+-- RE delimited parsing
+
+
+
+
+
+
+
+
+

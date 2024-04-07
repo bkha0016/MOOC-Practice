@@ -42,3 +42,10 @@ Summary:
 - Merge Sort: Efficient algorithm to sort an array
 - Applications: Many, many, many things are enabled by fast sort and search
 
+
+*Hint for the quiz:
+whitelists allow trusted clients, deny untrustworthy clients, 
+which are not listed and deny unknow clients. 
+
+blanklists allow trusted clients, which are not on the list, 
+allow unknown clients and deny untrustworthy clients.
