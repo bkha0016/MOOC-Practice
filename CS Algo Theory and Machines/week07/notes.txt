@@ -1,0 +1,58 @@
+===================
+A COMPUTING MACHINE
+===================
+
+TOY is an imaginary machine similar to:
+- Ancient computers
+- Today's smartphone processors
+- Countless other devices desinged and built over the past 50 years
+- Everything in TOY is encoded with a sequnce of bits (value 0 or 1)
+-- Why? Easy to represent two states (on and off) in real world
+-- Bits are organized in 16-bit sequences called words
+
+More convenient for humans: hexadecimal notation
+- 4 hex digits in each word
+- convert to and form binary 4 bits at a time
+
+Components of TOY machine
+- Memory (Holds data and instructions)
+-- 256 words
+-- 16 bits in each word
+-- Connected to registers
+-- Words are addressable --> use hexadecimal for addresses --> Number words from 00 to FF
+
+- Registers
+-- 16 words, addressable in hex from 0 to F (use names R[0] through R[F])
+-- Scratch space for calculations and data movements
+-- Connected to memory and ALU
+-- By convention, R[0] is always 0.
+
+- Arithmetic and logic unit (ALU)
+-- TOY's computational engine
+-- A calculator, not a computer
+-- Hardware that implements all data-type operations
+
+- Program Counter (PC) --> memory address of next instruction
+- Instruction register (IR) --> instructions being executed
+
+-- Fetch increment execute cycle
+--- Fetch: Get instruction from memory into IR
+--- Increment: Update PC to point to next instruction
+--- Execute: Move data to or from memory, change PC, or perform calc, as specified by IR
+
+
+A data type is a set of values and a set of operations on those values
+TOY's data type is 16-bit two's complemenet integers.
+
+Two kinds of operations
+- Arithmetic
+- Bitwise
+
+All other types of data must be implemeneted with software
+- 32 bit and 64 bit integers
+- 32 bit and 64 bit floating point values
+- Characters and strings
+
+
+
+

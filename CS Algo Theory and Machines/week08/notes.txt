@@ -1,0 +1,70 @@
+====================
+VON NEUMANN MACHINES
+====================
+
+Is 4096 bits of main memory enough to do anything useful?
+- Contents of memory, registers, and PC at a particular time
+-- Provides a record of what a program has done
+-- Completely determines whaat the machine will do
+
+Total number of bits in the state of the machine
+- 255 x 16 (memory)
+- 15 x 16 (registers)
+- 8 (PC)
+
+Total number of different states: 2^4328 > 10^1302
+
+Total number of different states that could be observed if every electron in the universe had a supercomputer
+examining states for its entire lifetime
+
+ARRAYS
+To implement an array
+- Keep items in an array contiguous starting at memory address a
+- Access a[i] at M[a+i]
+
+To access an array element, use indirection
+- Keep array address in a register
+- Add index
+- Indirect load/store uses contents of a register
+
+Buffer overflow in the real world
+C/C++/Objective C string/array overflow
+- Program does not check for long string
+- Hacker puts code at end of long string
+- Hacker owns your computer
+ 
+*Note Java tries to help us write secure code
+- Array bounds checking
+- Type safety
+
+Programs that process programs on TOY
+- Von neumann architecture
+-- No difference between data and instructions
+-- Same word can be data one moment, an instruction the next
+
+Early programmers immediately realized the advantages
+- Can save programs on physical media (dump)
+- Can load program at another time (boot)
+- Can develop higher-level languages (assembly language)
+
+Assembly language
+- Program in a higher-level language
+- Write a machine-language program to translate
+- Used widely from early days through the 1990s
+- Still used today
+
+
+Backward compatibility
+- Time to build a new computer. What to do about old software?
+*Approach 1: Rewrite all
+-- Costly and time-consuming
+-- Error prone
+-- Boring
+
+*Approach 2: Simulate the old computer on the new one
+-- Not very difficulty
+-- Still likely more efficient
+-- Succeeds for all old software
+
+
+
