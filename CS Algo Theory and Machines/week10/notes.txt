@@ -1,0 +1,39 @@
+=======================
+Central Processing Unit
+=======================
+
+Basic design of our circuits
+- Organized as componenets (functional units of TOY: ALU, memory, register, PC, & IR)
+- Connected by busses (groups of wires that propagate information between computer)
+- Controlled by control lines (single wires that control circuit behavior)
+
+Conventions:
+- Bus inputs are at the top, input connections are at the left
+- Bust outputs are at the bottom, output connections are at the right
+- Control lines are blue
+
+Loops in circuit lead to time-varying behavior
+- Sequence of switch operation matters
+- Need tight control
+
+Two switches each blocked bt the other
+- State determiend by whichever switches first
+- Stable (once set, state never changes)
+- Basic building block for memory circuit
+
+Three switches, blocked in a cycle
+- State determined by whichever switches first
+- Not stable (cycles through states)
+
+An SR flip-flop controls feedback
+- Add control lines to switches in simple feedback loop
+- R (reset) sets state to 0
+- S (set) sets state to 1
+- Q (state) is always available
+
+Add logic to an SR flip-flop for more precise control
+- Provide data value on an input wire instead of using S and R controls
+- Use WRITE control wire to enable change in flip-flop values
+- Flip-flop value always available as output
+
+
