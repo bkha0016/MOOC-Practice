@@ -1,0 +1,91 @@
+======================
+COMBINATIONAL CIRCUITS
+======================
+
+C.CIRCUIT
+- A digital circuit (all signals are 0 or 1) with no feedback (no loops)
+Why?
+- Accurate, reliable, general purpose, fast, cheap
+
+Basic abstractions
+- On and off
+- Wire: propagates on/off values
+- Switch: controls propagation of on/off values through wires
+
+Applications: Smartphone, tablet, game controller, antilock brakes, microprocessor,...
+
+Wires propagate on/off values
+- ON(1): connected to power
+- OFF(0): not connected to power
+- Any wire connected to a wire that is ON is also ON
+- Drawing convention: "flow" from top, left to bottom, right
+
+Switches control propagation of on/off values through wires
+- Simplest case involves two connections: control (input) and output
+- control OFF: output ON
+- control ON: output OFF
+
+A relay is a physical device that controls a switch with a magnet
+- 3 connections: input, output, control
+- Magnetic force pulls on a contact that cuts electrical flow
+
+Switches and wires model provides separation between physical world and logical world
+- we assume that switches operate as specified
+- that is the only assumption
+- physical realization of switch is irrelevant to design
+
+Physical realization dictates performance
+- size, speed, power
+
+New tech immediately gives new computer
+Better switch? Better computer.
+Basis of Moore's law
+
+BOOLEAN ALGEBRA
+- Variables represent true or false
+- Basic operations are AND, OR, and NOT
+Widely used in maths, logic, and computer science
+
+A truth table is a systematic way to define a boolean function
+- one row for each possible set of arguments
+- each row gives the function value for the specified arguments
+- N inputs: 2^N rows needed
+
+Truth tables are convenient for establishing identities in Boolean logic
+- One row for each possibility
+- Identity established if columns match.
+
+REMEMBER THE PROOFS OF DEMORGAN'S LAWS
+
+OR gates with multiple inputs
+- 1 if any input is 1
+- 0 if all inputs are 0
+
+Multiway generalized AND gates
+- 1 for exactly 1 set of input values
+- 0 for all other sets of input values
+
+Decoder
+- n input lines (address)
+- 2^n outputs
+- addressed output is 1
+- all other outputs are 0
+
+Implementation
+- use all 2^n generalized AND gates with n inputs
+- only one of them matches the input address
+
+Application
+- Select memeory word for read/write
+
+Demmultiplexer
+- n address inputs
+- 1 data input with value x
+- 2^n outputs
+- addressed output has value x
+- all other outputs are 0
+
+Encapsulation in hardware design mirrors familiar principles in software design
+- Building a circuit from wires and switches is the implementation
+- Define a circuit by its inputs, controls, and outputs is the API
+- We control complexity by encapsulating circuits as we do with ADTs
